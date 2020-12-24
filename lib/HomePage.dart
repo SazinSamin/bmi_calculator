@@ -1,6 +1,6 @@
 import 'dart:math';
-
 import 'package:bmi_calculator/about.dart';
+import 'package:bmi_calculator/info_widget.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -131,32 +131,21 @@ class _HomePageState extends State<HomePage> {
                   },
                 ),
               ),
+              Padding(padding: EdgeInsets.all(20),),
               //Result text
-              Center(
-                child: Padding(
-                    padding: EdgeInsets.only(top: 40),
-                    child: Text(bmi.toStringAsPrecision(3), style: TextStyle(fontSize: 50, color: Colors.white))
+              Container(
+                decoration: BoxDecoration(
+                  color: Colors.purple,
+                  borderRadius: BorderRadius.circular(30),
+                ),
+                child: Center(
+                  child: Padding(
+                      padding: EdgeInsets.all(10),
+                      child: Text(bmi.toStringAsPrecision(3), style: TextStyle(fontSize: 50, color: Colors.white))
+                  ),
                 ),
               ),
-              Center(
-                child: Builder(builder: (context){
-                  if(bmi>2 && bmi<18.5){
-                    return Text("Underweight", style: TextStyle(fontSize: 60, color: Colors.white),);
-                  }else if(bmi>18.5 && bmi<25){
-                    return Text("Normal.", style: TextStyle(fontSize: 60, color: Colors.white),);
-                  }else if(bmi>25 && bmi<30){
-                    return Text("Overweight", style: TextStyle(fontSize: 60, color: Colors.white),);
-                  }else if(bmi>30 && bmi<35){
-                    return Text("Obese Class I", style: TextStyle(fontSize: 60, color: Colors.white),);
-                  }else if(bmi>35 && bmi<40){
-                    return Text("Obese Class II", style: TextStyle(fontSize: 60, color: Colors.white),);
-                  }else if(bmi>40){
-                    return Text("Obese Class III", style: TextStyle(fontSize: 60, color: Colors.white),);
-                  } else{
-                    return Text("No data");
-                  }
-                }),
-              )
+              Info(bmi),
             ],
           ),
         ),
