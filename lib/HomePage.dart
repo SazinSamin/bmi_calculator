@@ -38,13 +38,13 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.greenAccent,
+      backgroundColor: Colors.cyanAccent,
       appBar: AppBar(
         title: Text("BMI calculator"),
       ),
       body: SingleChildScrollView(
         child: Container(
-          color: Colors.greenAccent,
+          color: Colors.cyanAccent,
           padding: EdgeInsets.fromLTRB(30, 40, 30, 10),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
@@ -102,7 +102,7 @@ class _HomePageState extends State<HomePage> {
               ),
               //Button
               FlatButton(
-                child: Icon(Icons.timeline_sharp),
+                child: Icon(Icons.timeline_sharp, color: Colors.white,),
                 color: Colors.red,
                 onPressed: (){
                   height_change();
@@ -111,7 +111,7 @@ class _HomePageState extends State<HomePage> {
               //Result text
               Padding(
                   padding: EdgeInsets.only(top: 40),
-                  child: Text(bmi.toStringAsPrecision(3))),
+                  child: Text(bmi!=null ? "Result" : bmi.toStringAsPrecision(3), style: TextStyle(fontSize: 50),)),
             ],
           ),
         ),
