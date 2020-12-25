@@ -20,9 +20,7 @@ class _HomePageState extends State<HomePage> {
   height_change(){
     setState(() {
       height = (inches + (feet*12)) * 0.0254;
-      print("Height in meter: $height m");
       bmi = ((weight / pow(height, 2)).toDouble());
-      print(bmi);
     });
   }
 
@@ -61,7 +59,7 @@ class _HomePageState extends State<HomePage> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text("Weight",style: TextStyle(fontSize: 30, color: Colors.white),),
+                  Text("Weight(Kg)",style: TextStyle(fontSize: 30, color: Colors.white),),
                   Padding(
                     padding: EdgeInsets.fromLTRB(0, 10, 0, 30),
                     child: TextFormField(
@@ -147,6 +145,8 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                   Info(bmi),
+                  SizedBox(height: 40,),
+                  Text("Design and Developed by Sazin Reshed Samin", style: TextStyle(color: Colors.white),),
                 ],
               ),
             ),
