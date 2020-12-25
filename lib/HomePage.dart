@@ -146,7 +146,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                   Info(bmi),
                   SizedBox(height: 40,),
-                  Text("Design and Developed by Sazin Reshed Samin", style: TextStyle(color: Colors.white),),
+                  Text("Design and Developed by Sazin Reshed Samin...", style: TextStyle(color: Colors.white),),
                 ],
               ),
             ),
