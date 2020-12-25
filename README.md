@@ -4,7 +4,7 @@ A Flutter based application.
 
 ## The app screenshot below:
 
-<img src="https://github.com/SazinSamin/bmi_calculator/blob/master/BMI_calculator_screenshot.jpg width="20%">
+<img src="https://github.com/SazinSamin/bmi_calculator/blob/master/BMI_calculator_screenshot.jpg" width="20%">
 
 Design and Delevloped by Sazin Reshed Samin
 email: sazinsamin50@gmail.com
