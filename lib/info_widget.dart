@@ -16,11 +16,11 @@ class Info extends StatelessWidget {
         }else if(bmi>25 && bmi<30){
           return Text("Overweight", style: TextStyle(fontSize: 40, color: Colors.white),);
         }else if(bmi>30 && bmi<35){
-          return Text("Obese Class I", style: TextStyle(fontSize: 60, color: Colors.white),);
+          return Text("Obese Class I", style: TextStyle(fontSize: 40, color: Colors.white),);
         }else if(bmi>35 && bmi<40){
-          return Text("Obese Class II", style: TextStyle(fontSize: 60, color: Colors.white),);
+          return Text("Obese Class II", style: TextStyle(fontSize: 40, color: Colors.white),);
         }else if(bmi>40){
-          return Text("Obese Class III", style: TextStyle(fontSize: 60, color: Colors.white),);
+          return Text("Obese Class III", style: TextStyle(fontSize: 40, color: Colors.white),);
         } else{
           return Text("No data");
         }
